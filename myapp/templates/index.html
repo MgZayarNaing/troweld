@@ -3,7 +3,24 @@
 {% load static %}
 
 
-<h1>Index</h1>
+<!-- slider section -->
+<section class="slider_section ">
+    <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            {% for slider in imageslider %}
+            <div class="carousel-item active">
+                <div class="container ">
+                    <div class="detail-box">
+                        <h1>{{slider.title}}</h1>
+                        <img src="{{slider.image.url}}" alt="">
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- end slider section -->
 
 
 {% endblock %}
